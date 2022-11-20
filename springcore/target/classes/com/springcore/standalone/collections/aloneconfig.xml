@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.springframework.org/schema/util
+    http://www.springframework.org/schema/util/spring-util.xsd">
+    
+    
+    <!-- This is our bean -->
+    
+    <!-- 
+      1.Create maven Project
+      2.Adding denpencies = spring core,spring context
+      3.creating bean = java pojo
+      4.creating confriguration file = config.xml
+      5.setter Injection
+      6. Main class : which can pull the object and use.
+ 
+     -->
+    
+     <!--   standalone List -->
+     <util:list list-class="java.util.Vector" id="bestfriends" >
+     <value>Aman</value>
+     <value>Raman</value>
+     <value>Naman</value>
+     <value>Shiva</value>
+     </util:list>
+     
+     <!--   standalone List -->
+     
+     <util:map map-class="java.util.TreeMap" id="fees" >
+        <entry key="Spring Framework" value="5000" />
+        <entry key="Django Framework" value="4000" />
+        <entry key="Hibernate Framework" value="1000" />
+     
+     </util:map>
+     
+     <!--   standalone List -->
+     <util:properties id="dbconfig">
+        <prop key="driver" >com.sql.driver</prop>
+        <prop key="username">sandeep</prop>
+        <prop key="password">123456</prop>
+           
+     </util:properties>
+      
+    <bean class="com.springcore.standalone.collections.Person" name="person1" >
+        <!--  <property name="friends"><ref  bean="bestfriends" /></property> -->
+        <property name="friends" ref = "bestfriends"></property>
+        <property name="feeStructure" ref="fees" />
+        <property name="property"  ref="dbconfig" />
+    
+    </bean>
+    
+    
+    
+    
+</beans>

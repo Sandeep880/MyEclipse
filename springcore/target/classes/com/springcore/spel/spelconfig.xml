@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    
+    <!-- This is our bean -->
+    
+    <!-- 
+      1.Create maven Project
+      2.Adding denpencies = spring core,spring context
+      3.creating bean = java pojo
+      4.creating confriguration file = config.xml
+      5.setter Injection
+      6. Main class : which can pull the object and use.
+    
+    
+     -->
+    
+    
+    <context:component-scan base-package="com.springcore.spel" ></context:component-scan>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</beans>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    
+    <!-- This is our bean -->
+    
+    <!-- 
+      1.Create maven Project
+      2.Adding denpencies = spring core,spring context
+      3.creating bean = java pojo
+      4.creating confriguration file = config.xml
+      5.setter Injection
+      6. Main class : which can pull the object and use.
+    
+    
+     -->
+    <bean class="com.springcore.constructerinjection.City" name="city" c:noOfCity="patna" />
+    
+    <bean class="com.springcore.constructerinjection.State" name="state" c:name="Bihar" c:noOfPeople="1000" 
+                    c:city-ref="city"  c:noOfMC="PMC"    />
+                    
+                    <!-- c:noOfMC="PMC" -->
+                    
+    <bean class="com.springcore.constructerinjection.Addition" name= "add">
+    
+   <constructor-arg value="12" type="int" index="1" />
+   <constructor-arg value="13" type="int" index="0" />
+    
+    </bean>
+
+</beans>
